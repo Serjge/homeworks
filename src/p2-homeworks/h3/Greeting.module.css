@@ -1,0 +1,60 @@
+.someClass {
+
+    margin-top: 50px;
+    padding: 5px;
+
+}
+
+.wrapper {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.columns {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.errorText {
+    color: red;
+}
+
+.inputClass {
+    height: 30px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    color: #66727d;
+    background-color: #17212b;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button {
+margin: 0 10px;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #4676D7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.button:hover {
+    background: #1d49aa;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #cbd6ee;
+}
