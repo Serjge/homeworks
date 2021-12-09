@@ -58,7 +58,7 @@ function HW1() {
             <hr/>
             homeworks 1
 
-            should work (должно работать)
+            {/*should work (должно работать)*/}
 
             <Message
                 avatar={messageData.avatar}
@@ -75,7 +75,7 @@ function HW1() {
             {/*<AlternativeMessage messages={messageDataAlternative1} />*/}
             {/*для личного творчества, могу проверить*/}
 
-            <hr/>
+            {/*<hr/>*/}
         </div>
     )
 }

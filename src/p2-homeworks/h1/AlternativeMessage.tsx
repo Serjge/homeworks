@@ -8,6 +8,11 @@ type AlternativeMessagePropsType = {
 }
 
 function AlternativeMessage(props: AlternativeMessagePropsType) {
+    console.log(typeof props.messages[0])
+    // const  nameClass = `${c.messageInfoBlock} ${c[`messageInfoBlock_${props.id}]}`
+
+    const classNameMap = props.messages[0].name === 'Serjge' ? c.message__body__Serjge : c.message__body
+
     if (props.messages.length === 3) {
         return (
             <div>
@@ -15,7 +20,7 @@ function AlternativeMessage(props: AlternativeMessagePropsType) {
                     <div className={c.message__avatar_none}></div>
                     <div className={c.message__body}>
                         <div className={c.message__body_item}>
-                            <p className={c.message__name}>{props.messages[0].name}</p>
+                            <p  className={c.message__name}>{props.messages[0].name}</p>
                             <p className={c.Message__text}>{props.messages[0].message}</p>
                         </div>
                         <div className={c.message__time}>{props.messages[0].time}</div>
@@ -34,7 +39,6 @@ function AlternativeMessage(props: AlternativeMessagePropsType) {
                     <div className={c.message__avatar}><img alt='avatar' src={props.messages[2].avatar}/></div>
                     <div className={c.message__body}>
                         <div className={c.message__body_item}>
-
                             <p className={c.Message__text}>{props.messages[2].message}</p>
                         </div>
                         <div className={c.message__time}>{props.messages[2].time}</div>
@@ -68,7 +72,8 @@ function AlternativeMessage(props: AlternativeMessagePropsType) {
                 </div>
             </div>
         )
-    } else {
+    }
+    else {
         return (
             <div className={c.message}>
                 <div className={c.message__avatar}><img alt='avatar'
