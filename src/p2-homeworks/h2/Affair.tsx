@@ -15,13 +15,9 @@ function Affair(props: AffairPropsType) {
     const classes = () => {
         switch(props.affair.priority) {
             case "low":  return styles.low
-                break
             case "middle": return styles.middle
-                break
             case "high": return styles.high
-                break
             default: return ''
-
         }
     }
 
