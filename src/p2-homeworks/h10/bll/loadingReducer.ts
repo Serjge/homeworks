@@ -1,14 +1,34 @@
-const initState = {
+import loading from './new.svg'
 
+export const initState = {
+    pic: loading,
+    isLoading: false
 }
 
-export const loadingReducer = (state = initState, action: any): any => { // fix any
+export type initState = typeof initState
+export type ActionType =loadingActionType
+
+export const loadingReducer = (state = initState, action: ActionType): initState => { // fix any
     switch (action.type) {
-        case '': {
-            return state
+        case 'loading': {
+            return {...state, isLoading: action.payload.isLoading}
         }
         default: return state
     }
 }
 
-export const loadingAC = (): any => {} // fix any
+export const loadingAC = (isLoading: boolean): loadingActionType => {
+    return {
+        type: 'loading',
+        payload:{
+            isLoading: isLoading
+        }
+    }
+} // fix any
+
+type loadingActionType = {
+    type: 'loading'
+    payload:{
+        isLoading: boolean
+    }
+}
