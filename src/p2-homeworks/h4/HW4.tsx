@@ -19,7 +19,7 @@ function HW4() {
         }
     }
     const showAlert2 = () => {
-        if (error) {
+        if (error2) {
             alert('введите текст...')
         } else {
             setText2('')
