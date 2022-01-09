@@ -1,0 +1,12 @@
+.wrapper__hw {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px ;
+   width: 100%;
+    border: blue 1px solid;
+    border-radius: 20px;
+    background: #012364;
+
+
+}

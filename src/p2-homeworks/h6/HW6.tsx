@@ -16,7 +16,7 @@ function HW6() {
     }
 
     return (
-        <div>
+        <div >
             <hr/>
             homeworks 6
 

@@ -9,8 +9,10 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 type SuperInputTextPropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
     onChangeText?: (value: string) => void
     onEnter?: () => void
+    onCtrlEnter?: () => void
     error?: string
     spanClassName?: string
+
 }
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
@@ -18,8 +20,8 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
         onChange, onChangeText,
         onKeyPress, onEnter,
-        error,
-        className, spanClassName,
+        onKeyDown, onCtrlEnter,
+        error, className, spanClassName,
 
         ...restProps// все остальные пропсы попадут в объект restProps
     }
@@ -37,9 +39,17 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         && e.key === 'Enter' // и если нажата кнопка Enter
         && onEnter() // то вызвать его
     }
+    const onKeyPressCtrlEnterCallback = (e: KeyboardEvent<HTMLInputElement>) => {
+        onKeyDown && onKeyDown(e);
+
+        onCtrlEnter // если есть пропс onEnter
+        && (e.ctrlKey || e.metaKey) // и зажата кнопка ctrl или Сmd на mac
+        && e.key === 'Enter' // и если нажата кнопка Enter
+        && onCtrlEnter() // то вызвать его
+    }
 
     const finalSpanClassName = `${s.error} ${spanClassName ? spanClassName : ''}`
-    const finalInputClassName = `${error? s.errorInput: s.superInput} ${className }` // need to fix with (?:) and s.superInput
+    const finalInputClassName = `${error ? s.errorInput : s.superInput} ${className}` // need to fix with (?:) and s.superInput
 
     return (
         <>
@@ -48,6 +58,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 onChange={onChangeCallback}
                 onKeyPress={onKeyPressCallback}
                 className={finalInputClassName}
+                onKeyDown={onKeyPressCtrlEnterCallback}
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />

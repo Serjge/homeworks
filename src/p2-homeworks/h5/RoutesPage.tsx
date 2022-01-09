@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, Routes } from 'react-router-dom'
+import {Navigate, Route, Routes } from 'react-router-dom'
 import Junior from "./pages/Junior";
 import PreJunior from "./pages/PreJunior";
 import JuniorPlus from "./pages/JuniorPlus";
@@ -9,7 +9,6 @@ export const PATH = {
     PRE_JUNIOR: '/pre-junior',
     JUNIOR: '/junior',
     JUNIOR_PLUS: '/junior-plus',
-    // add paths
 }
 
 function RoutesPage() {
@@ -17,7 +16,7 @@ function RoutesPage() {
         <div>
             <Routes>
                 <Route path={'/*'} element={<Error404/>} />
-                <Route path={'/'} element={<PreJunior />} />
+                <Route path={'/'} element={<Navigate to={PATH.PRE_JUNIOR}/>} />
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior />} />
                 <Route path={PATH.JUNIOR} element={<Junior />} />
                 <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus />} />

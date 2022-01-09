@@ -54,7 +54,7 @@ const messageDataAlternative3 = [
 
 function HW1() {
     return (
-        <div>
+        <div >
             <hr/>
             homeworks 1
 

@@ -6,13 +6,25 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
 function HW4() {
     const [text, setText] = useState<string>('')
+    const [text2, setText2] = useState<string>('')
     const error = text ? '' : 'error'
+    const error2 = text2 ? '' : 'error'
 
     const showAlert = () => {
         if (error) {
             alert('введите текст...')
         } else {
+            setText('')
             alert(text) // если нет ошибки показать текст
+        }
+    }
+    const showAlert2 = () => {
+        if (error) {
+            alert('введите текст...')
+        } else {
+            setText2('')
+            alert(text2) // если нет ошибки показать текст
+
         }
     }
 
@@ -68,6 +80,16 @@ function HW4() {
             </div>
 
             <hr/>
+            <div className={s.column}>
+                Input dispatch text Ctrl + Enter or Cmd + Enter for mac
+                <SuperInputText
+                    value={text2}
+                    onChangeText={setText2}
+                    onCtrlEnter={showAlert2}
+                    error={error2}
+                    spanClassName={s.testSpanError}
+                />
+            </div>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperInputText/>*/}
             {/*<AlternativeSuperButton/>*/}
