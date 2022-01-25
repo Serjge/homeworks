@@ -9,27 +9,27 @@ const messageData = {
     message: 'Hello Friends!',
     time: '22:00',
 }
-const messageDataAlternative1 = [
-        {
-            avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-            name: 'Serjge',
-            message: 'Hello Friend!',
-            time: '22:00',
-        }
-         ]
-const messageDataAlternative2 = [
-    {
-        avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-        name: 'Serjge',
-        message: 'Hello Friend!',
-        time: '22:00',
-    },
-    {
-        avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-        name: 'Serjge',
-        message: 'How are you?',
-        time: '22:01',
-    } ]
+// const messageDataAlternative1 = [
+//         {
+//             avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
+//             name: 'Serjge',
+//             message: 'Hello Friend!',
+//             time: '22:00',
+//         }
+//          ]
+// const messageDataAlternative2 = [
+//     {
+//         avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
+//         name: 'Serjge',
+//         message: 'Hello Friend!',
+//         time: '22:00',
+//     },
+//     {
+//         avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
+//         name: 'Serjge',
+//         message: 'How are you?',
+//         time: '22:01',
+//     } ]
 const messageDataAlternative3 = [
     {
         avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',

@@ -5,10 +5,10 @@ export const initState = {
     isLoading: false
 }
 
-export type initState = typeof initState
+export type initStateType = typeof initState
 export type ActionType =loadingActionType
 
-export const loadingReducer = (state = initState, action: ActionType): initState => { // fix any
+export const loadingReducer = (state = initState, action: ActionType): initStateType => { // fix any
     switch (action.type) {
         case 'loading': {
             return {...state, isLoading: action.payload.isLoading}

@@ -1,23 +1,19 @@
 import React from 'react'
 import c from "./Message.module.css";
-import Message from "./Message";
-import {MessagePropsType} from './Message'
+import {MessagePropsType} from "./Message";
 
 type AlternativeMessagePropsType = {
     messages: Array<MessagePropsType>
 }
 
 function AlternativeMessage(props: AlternativeMessagePropsType) {
-    console.log(typeof props.messages[0])
-    // const  nameClass = `${c.messageInfoBlock} ${c[`messageInfoBlock_${props.id}]}`
 
-    const classNameMap = props.messages[0].name === 'Serjge' ? c.message__body__Serjge : c.message__body
 
     if (props.messages.length === 3) {
         return (
             <div>
                 <div className={c.message}>
-                    <div className={c.message__avatar_none}></div>
+                    <div className={c.message__avatar_none}/>
                     <div className={c.message__body}>
                         <div className={c.message__body_item}>
                             <p  className={c.message__name}>{props.messages[0].name}</p>
@@ -27,7 +23,7 @@ function AlternativeMessage(props: AlternativeMessagePropsType) {
                     </div>
                 </div>
                 <div className={c.message}>
-                    <div className={c.message__avatar_none}></div>
+                    <div className={c.message__avatar_none}/>
                     <div className={c.message__body}>
                         <div className={c.message__body_item}>
                             <p className={c.Message__text}>{props.messages[1].message}</p>
@@ -51,7 +47,7 @@ function AlternativeMessage(props: AlternativeMessagePropsType) {
         return (
             <div>
                 <div className={c.message}>
-                    <div className={c.message__avatar_none}></div>
+                    <div className={c.message__avatar_none}/>
                     <div className={c.message__body}>
                         <div className={c.message__body_item}>
                             <p className={c.message__name}>{props.messages[0].name}</p>
